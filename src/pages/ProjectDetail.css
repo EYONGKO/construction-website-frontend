@@ -1,0 +1,60 @@
+@import './ServiceDetail.css';
+
+.project-detail-hero {
+  min-height: clamp(440px, 68vh, 620px);
+}
+
+.project-detail-hero-media {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.03);
+}
+
+.project-detail-hero-overlay {
+  background: linear-gradient(90deg, rgba(12, 31, 54, 0.78) 0%, rgba(12, 31, 54, 0.5) 42%, rgba(12, 31, 54, 0.28) 100%);
+}
+
+.project-detail-hero-content {
+  min-height: clamp(440px, 68vh, 620px);
+}
+
+.project-detail-media {
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 1.2rem;
+}
+
+.project-detail-media img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.project-related-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.project-related-media {
+  overflow: hidden;
+  border-radius: 24px 24px 0 0;
+}
+
+.project-related-media img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-related-copy {
+  padding: 1.4rem 1.5rem 1.6rem;
+}
+
+@media (max-width: 700px) {
+  .project-detail-hero,
+  .project-detail-hero-content {
+    min-height: 420px;
+  }
+}

@@ -1,0 +1,77 @@
+.projects-page-redesign {
+  background: #ffffff;
+}
+
+.projects-list-section {
+  padding: 2rem 0 4rem;
+}
+
+.projects-redesign-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
+}
+
+.project-redesign-card {
+  overflow: hidden;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 16px 30px rgba(16, 42, 70, 0.08);
+}
+
+.project-redesign-media {
+  height: 260px;
+}
+
+.project-redesign-media img {
+  width: fit-content;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-redesign-copy {
+  padding: 1.5rem;
+}
+
+.project-redesign-location {
+  margin: 0 0 0.6rem;
+  color: #c89021;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-redesign-copy h3 {
+  margin: 0 0 0.7rem;
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+}
+
+.project-redesign-copy p {
+  margin: 0;
+  color: #64768a;
+  line-height: 1.7;
+}
+
+.project-redesign-category {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--navy);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.inner-cta-panel .products-cta-button {
+  display: flex;
+  width: fit-content;
+  min-width: 220px;
+  max-width: 320px;
+  min-height: 58px;
+  border-radius: 20px;
+  margin: 0.5rem auto 0;
+}
+
+
+

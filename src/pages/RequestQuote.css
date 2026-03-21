@@ -1,0 +1,134 @@
+.quote-page-redesign {
+  background: #f7fbff;
+}
+
+.quote-main-section {
+  padding: 2rem 0 4rem;
+}
+
+.quote-redesign-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  gap: 1.5rem;
+}
+
+.quote-side-card,
+.quote-form-card {
+  padding: 2rem;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 16px 30px rgba(16, 42, 70, 0.08);
+}
+
+.quote-side-card h2,
+.quote-form-card h2 {
+  margin: 0 0 1.2rem;
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+}
+
+.quote-whatsapp-note {
+  margin-bottom: 1rem;
+  padding: 1rem 1.1rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #eef8f1, #f6fbf7);
+  border: 1px solid rgba(20, 110, 58, 0.12);
+}
+
+.quote-whatsapp-note strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #146e3a;
+}
+
+.quote-whatsapp-note p {
+  margin: 0;
+  color: #5f7286;
+  line-height: 1.6;
+}
+
+.quote-steps {
+  display: grid;
+  gap: 1rem;
+}
+
+.quote-step-item {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.quote-step-item span {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #dca634;
+  color: #102a46;
+  font-weight: 800;
+}
+
+.quote-step-item h3 {
+  margin: 0 0 0.35rem;
+  color: var(--navy);
+  font-size: 1.08rem;
+}
+
+.quote-step-item p {
+  margin: 0;
+  color: #627488;
+  line-height: 1.65;
+}
+
+.quote-note-box {
+  margin-top: 1.4rem;
+  padding: 1.3rem;
+  border-radius: 18px;
+  background: #eef5fb;
+}
+
+.quote-note-box h3 {
+  margin: 0 0 0.75rem;
+  color: var(--navy);
+}
+
+.quote-note-box ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #627488;
+  line-height: 1.8;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.quote-submit {
+  width: auto;
+  min-width: 200px;
+}
+
+.quote-whatsapp-link {
+  display: inline-flex;
+  margin-top: 1rem;
+  color: #146e3a;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.quote-whatsapp-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .quote-redesign-grid,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

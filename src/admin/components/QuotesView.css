@@ -1,0 +1,327 @@
+.quotes-view {
+  width: 100%;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.view-header h2 {
+  color: #2c3e50;
+  margin: 0;
+}
+
+.quote-count {
+  background: #ff6b35;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #f5c6cb;
+}
+
+.no-items {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.quotes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.quote-item {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+
+.quote-item:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.quote-header {
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.quote-header:hover {
+  background: #f8f9fa;
+}
+
+.quote-client h3 {
+  color: #2c3e50;
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.quote-email {
+  color: #ff6b35;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.quote-phone {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.quote-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.project-type {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.quote-date {
+  color: #666;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.expand-btn {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  color: #666;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s;
+  margin-top: 5px;
+}
+
+.expand-btn:hover {
+  background: #ff6b35;
+  border-color: #ff6b35;
+  color: white;
+}
+
+.quote-content {
+  border-top: 1px solid #e9ecef;
+  padding: 25px;
+  background: #fafbfc;
+}
+
+.quote-details {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #e9ecef;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.detail-row span {
+  color: #666;
+  text-align: right;
+  max-width: 60%;
+}
+
+.quote-description {
+  margin-bottom: 20px;
+}
+
+.quote-description h4 {
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.quote-description p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-wrap;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.quote-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  background: #ff6b35;
+  color: white;
+}
+
+.btn:hover {
+  background: #e55a2b;
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .view-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .quote-header {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .quote-meta {
+    width: 100%;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .quote-content {
+    padding: 20px;
+  }
+  
+  .quote-actions {
+    flex-direction: column;
+  }
+  
+  .quote-actions .btn {
+    width: 100%;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .detail-row span {
+    text-align: left;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-header {
+    padding: 15px;
+  }
+  
+  .quote-content {
+    padding: 15px;
+  }
+  
+  .quote-client h3 {
+    font-size: 1.1rem;
+  }
+  
+  .quote-email,
+  .quote-phone {
+    font-size: 0.85rem;
+  }
+  
+  .project-type {
+    font-size: 0.75rem;
+  }
+  
+  .quote-date {
+    font-size: 0.8rem;
+  }
+  
+  .quote-details {
+    padding: 15px;
+  }
+  
+  .quote-description p {
+    padding: 12px;
+  }
+}

@@ -1,0 +1,224 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  padding: 4.5rem 0 2rem;
+  background: linear-gradient(180deg, #102a46 0%, #0b2239 100%);
+  color: rgba(244, 247, 251, 0.88);
+}
+
+.footer-pattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.footer .container {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(180px, 0.8fr) minmax(180px, 0.8fr);
+  gap: 3rem;
+  padding-bottom: 2.5rem;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.95rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-brand-mark {
+  position: relative;
+  width: 78px;
+  height: 78px;
+}
+
+.footer-brand-grid,
+.footer-brand-bolt {
+  position: absolute;
+}
+
+.footer-brand-grid {
+  inset: 4px 14px 14px 4px;
+  border-radius: 18px 28px 18px 18px;
+  background: linear-gradient(180deg, rgba(9, 60, 149, 0.9), rgba(2, 37, 96, 0.96));
+}
+
+.footer-brand-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+  background-size: 12px 12px;
+  clip-path: polygon(0 26%, 55% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.footer-brand-bolt {
+  top: 6px;
+  left: 28px;
+  width: 28px;
+  height: 58px;
+  background: linear-gradient(180deg, #ffd24c, #e39b0f);
+  clip-path: polygon(48% 0, 100% 0, 62% 37%, 95% 37%, 22% 100%, 42% 56%, 0 56%);
+}
+
+.footer-brand-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand-copy strong {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.footer-brand-copy em {
+  margin-top: 0.35rem;
+  color: var(--accent);
+  font-style: normal;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.footer-brand-block p {
+  max-width: 440px;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: rgba(244, 247, 251, 0.74);
+}
+
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.6rem;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  justify-content: center;
+  min-width: 148px;
+  padding: 0.95rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-social-link:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.footer-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.footer-social-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.footer-column h3 {
+  margin-bottom: 1.35rem;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.footer-links a {
+  color: rgba(244, 247, 251, 0.8);
+  text-decoration: none;
+  font-size: 1.03rem;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: rgba(244, 247, 251, 0.68);
+}
+
+.footer-contact-line {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+@media (max-width: 960px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer {
+    padding-top: 3.5rem;
+  }
+
+  .footer-brand-mark {
+    width: 62px;
+    height: 62px;
+  }
+
+  .footer-brand-copy strong {
+    font-size: 1.9rem;
+  }
+
+  .footer-brand-copy em {
+    font-size: 0.75rem;
+  }
+
+  .footer-socials {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
