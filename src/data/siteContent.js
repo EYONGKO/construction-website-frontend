@@ -158,6 +158,26 @@ export const fallbackSiteContent = {
   teamMembers: fallbackTeamMembers
 };
 
+const frontendBaseUrl = typeof window !== 'undefined'
+  ? window.location.origin
+  : 'https://construction-frontend.onrender.com';
+
+export const resolveAssetUrl = (value = '') => {
+  if (!value) {
+    return '';
+  }
+
+  if (/^(data:|blob:|https?:\/\/)/i.test(value)) {
+    return value;
+  }
+
+  try {
+    return new URL(value, frontendBaseUrl).toString();
+  } catch {
+    return value;
+  }
+};
+
 export const serviceCatalogProducts = [
   {
     id: 'solar-panels',
@@ -371,11 +391,25 @@ export const getMergedProducts = (projects = []) => {
 export const normalizeSiteContent = (content = {}) => ({
   ...fallbackSiteContent,
   ...content,
+  homeHeroImage: resolveAssetUrl(content?.homeHeroImage || fallbackSiteContent.homeHeroImage),
+  servicesHeroImage: resolveAssetUrl(content?.servicesHeroImage || fallbackSiteContent.servicesHeroImage),
+  productsHeroImage: resolveAssetUrl(content?.productsHeroImage || fallbackSiteContent.productsHeroImage),
+  aboutHeroImage: resolveAssetUrl(content?.aboutHeroImage || fallbackSiteContent.aboutHeroImage),
+  contactHeroImage: resolveAssetUrl(content?.contactHeroImage || fallbackSiteContent.contactHeroImage),
+  quoteHeroImage: resolveAssetUrl(content?.quoteHeroImage || fallbackSiteContent.quoteHeroImage),
   teamMembers: Array.isArray(content?.teamMembers) && content.teamMembers.length
     ? content.teamMembers.map((member, index) => ({
         ...fallbackTeamMembers[index % fallbackTeamMembers.length],
         ...member,
+        name: member?.name || fallbackTeamMembers[index % fallbackTeamMembers.length].name,
+        role: member?.role || fallbackTeamMembers[index % fallbackTeamMembers.length].role,
+        bio: member?.bio || fallbackTeamMembers[index % fallbackTeamMembers.length].bio,
+        image: resolveAssetUrl(member?.image || fallbackTeamMembers[index % fallbackTeamMembers.length].image),
+        imagePosition: member?.imagePosition || fallbackTeamMembers[index % fallbackTeamMembers.length].imagePosition,
       }))
-    : fallbackTeamMembers,
+    : fallbackTeamMembers.map((member) => ({
+        ...member,
+        image: resolveAssetUrl(member.image),
+      })),
 });
 
